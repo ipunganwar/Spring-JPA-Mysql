@@ -36,8 +36,7 @@ spring.jpa.hibernate.ddl-auto=update
 </li>
 <li>
 <p>buat class User
-<pre><code>
-package com.ipung.training.db.model;
+<pre><code>package com.ipung.training.db.model;
 
 @Entity
 public class User {
@@ -65,8 +64,7 @@ public class User {
 </li>
 <li> 
 <p>buat interface UsersRepository. </p>
-<pre><code>
-package com.ipung.training.db.repository;
+<pre><code>package com.ipung.training.db.repository;
   
   public interface UsersRepository extends JpaRepository<Users, Integer>{
 
@@ -78,8 +76,7 @@ package com.ipung.training.db.repository;
 </li>
 <li>
 <p>buat class UsersResources
-<pre><code>
-package com.ipung.training.db.resource;
+<pre><code>package com.ipung.training.db.resource;
 
 @RestController
 @RequestMapping(value="/rest/users")
