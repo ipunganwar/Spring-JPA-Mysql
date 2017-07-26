@@ -81,7 +81,7 @@ public class UsersResources {
 
 }
 ```
-- tambahkan di application.properties agar import.sql jalan.
+- tambahkan di application.properties agar `import.sql` jalan.
 ```
 spring.jpa.hibernate.ddl-auto=create
 ```
