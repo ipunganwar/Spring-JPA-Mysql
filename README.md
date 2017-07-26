@@ -1,26 +1,18 @@
-# Spring-JPA-Mysql
-Spring JPA + Mysql example
-<ul>
-<li>
-<p>Buat database test</p>
-<pre><code>  mysql> create database test;
-</code></pre>
-</li>
-<li>
-<p>Go to https://start.spring.io/ .</p>
-<pre><code>
+# Spring JPA + Mysql example
+- Buat database test
+```
+mysql> create database test;
+```
+- Go to https://start.spring.io/ .
+```
 Project Metadata
 Group : com.ipung.training.db
 Artifact  : demo-spring-mysql
 Dependencies : MySQL , Web, JPA
-</code></pre>
-</li>
-<li>
-<p>Generate dan ekstrak , lalu import ke dalam eclipse.</p>
-</li>
-<li>
-<p>tambahkan konfigurasi di application.properties. </p>
-<pre><code>
+```
+- Generate dan ekstrak , lalu import ke dalam eclipse.
+- tambahkan konfigurasi di application.properties. 
+```
 spring.datasource.url=jdbc:mysql://localhost:3306/test
 spring.datasource.username=root
 spring.datasource.password=123456
@@ -29,14 +21,11 @@ spring.datasource.driver-class-name=com.mysql.jdbc.Driver
 spring.jpa.generate-ddl=true
 spring.jpa.show-sql = true
 spring.jpa.hibernate.ddl-auto=update
-</code></pre>
-</li>
-<li>
-<p>Buat package com.ipung.training.db.model. </p>
-</li>
-<li>
-<p>buat class User
-<pre><code>package com.ipung.training.db.model;
+```
+- Buat package com.ipung.training.db.model. 
+- buat class User
+```
+package com.ipung.training.db.model;
 
 @Entity
 public class User {
@@ -57,26 +46,20 @@ public class User {
   
   //getter
   //setter
- </code></pre>
-</li> 
-<li> 
-<p>buat package com.ipung.training.db.repository. </p>
-</li>
-<li> 
-<p>buat interface UsersRepository. </p>
-<pre><code>package com.ipung.training.db.repository;
+ ``` 
+- buat package com.ipung.training.db.repository. 
+- buat interface UsersRepository. 
+```
+package com.ipung.training.db.repository;
   
   public interface UsersRepository extends JpaRepository<Users, Integer>{
 
 }
-</code></pre>
-</li>
-<li>
-<p>tambahkan package com.ipung.training.db.resource. </p>
-</li>
-<li>
-<p>buat class UsersResources
-<pre><code>package com.ipung.training.db.resource;
+```
+- tambahkan 'package com.ipung.training.db.resource' . 
+- buat class UsersResources
+```
+package com.ipung.training.db.resource;
 
 @RestController
 @RequestMapping(value="/rest/users")
@@ -97,16 +80,12 @@ public class UsersResources {
 	}
 
 }
-</code></pre>
-</li>
-<li>
-<p>tambahkan di application.properties agar import.sql jalan. </p>
-<pre><code>
+```
+- tambahkan di application.properties agar import.sql jalan.
+```
 spring.jpa.hibernate.ddl-auto=create
-</code></pre>
-</li>
-<li>
-<p>Jalankan aplikasi tsb, lalu akses di browser http://localhost:8080/rest/users/all </p>
+```
+- Jalankan aplikasi tsb, lalu akses di browser http://localhost:8080/rest/users/all 
 <pre><code>
 [ {
   "id" : 1,
