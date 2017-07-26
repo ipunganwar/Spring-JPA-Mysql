@@ -22,7 +22,7 @@ spring.jpa.generate-ddl=true
 spring.jpa.show-sql = true
 spring.jpa.hibernate.ddl-auto=update
 ```
-- Buat package com.ipung.training.db.model. 
+- Buat package `com.ipung.training.db.model`. 
 - buat class User
 ```
 package com.ipung.training.db.model;
@@ -47,7 +47,7 @@ public class User {
   //getter
   //setter
  ``` 
-- buat package com.ipung.training.db.repository. 
+- buat package `com.ipung.training.db.repository`. 
 - buat interface UsersRepository. 
 ```
 package com.ipung.training.db.repository;
@@ -86,7 +86,7 @@ public class UsersResources {
 spring.jpa.hibernate.ddl-auto=create
 ```
 - Jalankan aplikasi tsb, lalu akses di browser http://localhost:8080/rest/users/all 
-<pre><code>
+```
 [ {
   "id" : 1,
   "name" : "Ipung",
@@ -98,13 +98,10 @@ spring.jpa.hibernate.ddl-auto=create
   "teamName" : "Test",
   "salary" : 3000
 } ]
-</code></pre>
-<li>
-<p>jalankan method POST melalui aplikasi Rest Console / Postman. </p>
-</li>
-<li>
-<p>Method POST
-<pre><code>
+```
+- jalankan method POST melalui aplikasi Rest Console / Postman.
+- Method POST
+```
 Target : Request URI : http://localhost:8080/rest/users/load
 Body : Content-Type : application/json
 Request Payload : RAW Body : 
@@ -113,8 +110,8 @@ Request Payload : RAW Body :
   "teamName" : "baru",
   "salary" : 5000
 }
-</code></pre>
-<pre><code>
+```
+```
 [{
     "id": 1,
     "name": "Ipung",
@@ -131,7 +128,6 @@ Request Payload : RAW Body :
     "teamName": "baru",
     "salary": 5000
 }]
-</code></pre>
-<li>
-</ul>
+```
+
   
